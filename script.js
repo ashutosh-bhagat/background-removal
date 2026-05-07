@@ -6,18 +6,17 @@ const downloadButton = document.getElementById("download-btn");
 const loader = document.getElementById("loading");
 
 removeButton.addEventListener("click", async () => {
-  
   removeButton.innerText = "Processing...";
   const file = inputImage.files[0];
   const formData = new FormData();
   formData.append("image_file", file);
-//   aa formData j api through travel karine jasee server pasee 
+  //   aa formData j api through travel karine jasee server pasee
 
   try {
     const response = await fetch("https://api.remove.bg/v1.0/removebg", {
       // The link which  is here is for the server of which we are using API key.
       method: "POST",
-      headers: { "X-Api-Key": "YOUR_API_KEY" },
+      headers: { "X-Api-Key": "k4hnW8xnYXPkQyFKBZacC3xn" },
       body: formData,
     });
     const blob = await response.blob();
